@@ -1,8 +1,28 @@
 :root {
+  --dark-purple: #301534;
+  --pink: #ad28eb;
+  --pale-purple: #8b6990;
+  --light-pink: #f8eeff;
+  --white: #fff;
   font-family: "Work Sans", sans-serif;
   font-size: 16px;
   font-weight: 400;
   line-height: 150%;
+  background-color: var(--light-pink);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 100vw;
+  min-height: 100vh;
+  background-image: url("./assets/background-pattern-mobile.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
 h1 {
