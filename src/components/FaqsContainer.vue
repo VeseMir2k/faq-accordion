@@ -16,4 +16,11 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.faqs-container {
+  min-width: 100%;
+  background-color: var(--white);
+  padding: 24px;
+  border-radius: 8px;
+}
+</style>
