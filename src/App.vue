@@ -1,7 +1,5 @@
 <template>
-  <div class="App">
-    <FaqsContainer />
-  </div>
+  <FaqsContainer />
 </template>
 
 <script>
