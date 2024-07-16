@@ -4,11 +4,11 @@
 
 <script>
 export default {
-    name:'QuestionAnswerContainer'
-    setup () {
-        return {}
-    }
-}
+  name: "QuestionAnswerContainer",
+  setup() {
+    return {};
+  },
+};
 </script>
 
 <style lang="scss" scoped></style>
