@@ -4,8 +4,6 @@
   --pale-purple: #8b6990;
   --light-pink: #f8eeff;
   --white: #fff;
-  font-family: "Work Sans", sans-serif;
-  background-color: var(--light-pink);
 }
 
 * {
@@ -14,14 +12,20 @@
   box-sizing: border-box;
 }
 
+html {
+  font-family: "Work Sans", sans-serif;
+  background-color: var(--light-pink);
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--dark-purple);
+}
+
 body {
   min-width: 100vw;
   min-height: 100vh;
   background-image: url("./assets/background-pattern-mobile.svg");
   background-repeat: no-repeat;
   background-size: contain;
-  font-size: 14px;
-  font-weight: 400;
 }
 
 h1 {
@@ -41,6 +45,11 @@ h2 {
   font-size: 18px;
   font-weight: 500;
 } */
+
+p {
+  color: var(--pale-purple);
+  line-height: 150%;
+}
 
 #app {
   min-width: 100%;

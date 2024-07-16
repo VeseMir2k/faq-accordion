@@ -1,15 +1,17 @@
 <template>
   <div class="faqs-container">
     <FaqsContainerTitle />
+    <QuestionAnswer />
   </div>
 </template>
 
 <script>
 import FaqsContainerTitle from "./FaqsContainerTitle.vue";
+import QuestionAnswer from "./QuestionAnswer.vue";
 
 export default {
   name: "FaqsContainer",
-  components: { FaqsContainerTitle },
+  components: { FaqsContainerTitle, QuestionAnswer },
   setup() {
     return {};
   },
