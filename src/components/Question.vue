@@ -1,18 +1,32 @@
 <template>
   <div class="question-container">
     <h2 class="question-container__question">
-      What is Frontend Mentor, and how will it help me?
+      {{ question }}
     </h2>
-    <Button />
+    <button @click="console.log(index)">+</button>
   </div>
 </template>
 
 <script>
-import Button from "./Button.vue";
-
 export default {
   name: "Question",
-  components: { Button },
+  props: {
+    index: {
+      type: Number,
+    },
+    question: {
+      type: String,
+      required: true,
+    },
+  },
+  //   emits: ["isShow"],
+  //   setup(props, { emit }) {
+  //     const updateIsShowAnswer = () => {
+  //       emit("isShow", !props.isShowAnswerIndex);
+  //     };
+  //     return { updateIsShowAnswer };
+  //   },
+  // };
   setup() {
     return {};
   },

@@ -1,9 +1,7 @@
 <template>
   <div class="answer-container">
     <p class="answer-container__answer">
-      Frontend Mentor offers realistic coding challenges to help developers
-      improve their frontend coding skills with projects in HTML, CSS, and
-      JavaScript. It’s suitable for all levels and ideal for portfolio building.
+      {{ answer }}
     </p>
   </div>
 </template>
@@ -11,6 +9,12 @@
 <script>
 export default {
   name: "Answer",
+  props: {
+    answer: {
+      type: String,
+      required: true,
+    },
+  },
   setup() {
     return {};
   },
