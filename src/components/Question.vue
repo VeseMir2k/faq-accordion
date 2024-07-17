@@ -3,7 +3,7 @@
     <h2 class="question-container__question">
       {{ question }}
     </h2>
-    <button @click="console.log(index)">+</button>
+    <button @click="updateIsShowIndex">+</button>
   </div>
 </template>
 
@@ -12,23 +12,23 @@ export default {
   name: "Question",
   props: {
     index: {
-      type: Number,
+      type: String,
+    },
+    isShowIndex: {
+      type: String,
     },
     question: {
       type: String,
       required: true,
     },
   },
-  //   emits: ["isShow"],
-  //   setup(props, { emit }) {
-  //     const updateIsShowAnswer = () => {
-  //       emit("isShow", !props.isShowAnswerIndex);
-  //     };
-  //     return { updateIsShowAnswer };
-  //   },
-  // };
-  setup() {
-    return {};
+  emits: ["isShow"],
+  setup(props, { emit }) {
+    const updateIsShowIndex = () => {
+      emit("isShow", props.index);
+      console.log(props.index);
+    };
+    return { updateIsShowIndex };
   },
 };
 </script>
