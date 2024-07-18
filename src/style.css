@@ -51,11 +51,13 @@ p {
   line-height: 150%;
 }
 
+button {
+  background-color: transparent;
+  border: 0;
+}
+
 #app {
   min-width: 100%;
   min-height: 100vh;
-  padding: 0 24px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  padding: 100px 24px 0;
 }
