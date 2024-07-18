@@ -4,20 +4,20 @@
       <Question
         :question="questionAnswer.question"
         :index="index"
-        :isShowIndex="isShowIndex"
+        :isShow="isShow[index]"
         @is-show="updateIndex"
       />
       <Answer
         :answer="questionAnswer.answer"
         :index="index"
-        v-if="isShowIndex === index"
+        v-if="isShow[index]"
       />
     </div>
   </div>
 </template>
 
 <script>
-import { ref } from "vue";
+import { ref, reactive } from "vue";
 import data from "../data.json";
 import Question from "./Question.vue";
 import Answer from "./Answer.vue";
@@ -28,16 +28,15 @@ export default {
 
   setup() {
     const questionsAnswersData = ref(data);
-    const isShowIndex = ref("-1");
+    const isShow = reactive([]);
 
-    const updateIndex = (value) => {
-      isShowIndex.value = value;
-      console.log(value);
+    const updateIndex = (index) => {
+      isShow[index] = !isShow[index];
     };
 
     return {
       questionsAnswersData,
-      isShowIndex,
+      isShow,
       updateIndex,
     };
   },
