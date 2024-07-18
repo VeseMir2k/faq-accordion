@@ -1,6 +1,6 @@
 <template>
   <div class="question-answer-container">
-    <div v-for="(questionAnswer, index) in questionsAnswersData" :key="index">
+    <div v-for="(questionAnswer, index) in data" :key="index">
       <Question
         :question="questionAnswer.question"
         :index="index"
@@ -12,6 +12,7 @@
         :index="index"
         v-if="isShow[index]"
       />
+      <hr v-if="index < dataLength()" />
     </div>
   </div>
 </template>
@@ -27,20 +28,29 @@ export default {
   components: { Question, Answer },
 
   setup() {
-    const questionsAnswersData = ref(data);
     const isShow = reactive([]);
+
+    const dataLength = () => Object.keys(data).length;
 
     const updateIndex = (index) => {
       isShow[index] = !isShow[index];
+      console.log(dataLength());
     };
 
     return {
-      questionsAnswersData,
+      dataLength,
       isShow,
       updateIndex,
+      data,
     };
   },
 };
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+hr {
+  border-top: 1px solid var(--light-pink);
+  border-bottom: 0px solid transparent;
+  margin: 20px 0;
+}
+</style>
