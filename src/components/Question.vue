@@ -3,19 +3,16 @@
     <h2 class="question-container__question">
       {{ question }}
     </h2>
-    <button class="question-container__button">
-      <img v-if="isShow" src="../assets/icon-minus.svg" alt="" />
-      <img v-else src="../assets/icon-plus.svg" alt="" />
-    </button>
+    <PlusMinusIcon :isShow="isShow" />
   </div>
 </template>
 
 <script>
-import minusIcon from "../assets/icon-minus.svg";
-import plusIcon from "../assets/icon-plus.svg";
+import PlusMinusIcon from "./PlusMinusIcon.vue";
 
 export default {
   name: "Question",
+  components: { PlusMinusIcon },
   props: {
     index: {
       type: String,
@@ -48,8 +45,8 @@ export default {
   justify-content: space-between;
   gap: 24px;
   cursor: pointer;
-  &__button {
-    cursor: pointer;
+  &:hover {
+    color: var(--pink);
   }
 }
 </style>

@@ -34,7 +34,6 @@ export default {
 
     const updateIndex = (index) => {
       isShow[index] = !isShow[index];
-      console.log(dataLength());
     };
 
     return {
