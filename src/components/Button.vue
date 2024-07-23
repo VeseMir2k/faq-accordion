@@ -1,5 +1,5 @@
 <template>
-  <div @click="handleToggle" class="button">
+  <div class="button">
     <img src="../assets/icon-plus.svg" alt="" />
   </div>
 </template>
@@ -7,12 +7,6 @@
 <script>
 export default {
   name: "Button",
-  props: {
-    handleToggle: {
-      type: Function,
-      require: true,
-    },
-  },
   setup() {
     return {};
   },
