@@ -1,9 +1,9 @@
 <template>
-  <div class="question-container">
+  <div class="question-container" @click="toggleAnswer">
     <h2 class="question-container__question">
       {{ question }}
     </h2>
-    <button @click="toggleAnswer" class="question-container__button">
+    <button class="question-container__button">
       <img v-if="isShow" src="../assets/icon-minus.svg" alt="" />
       <img v-else src="../assets/icon-plus.svg" alt="" />
     </button>
@@ -47,5 +47,9 @@ export default {
   align-items: center;
   justify-content: space-between;
   gap: 24px;
+  cursor: pointer;
+  &__button {
+    cursor: pointer;
+  }
 }
 </style>
