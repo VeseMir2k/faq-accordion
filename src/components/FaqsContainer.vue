@@ -25,4 +25,11 @@ export default {
   padding: 24px;
   border-radius: 8px;
 }
+
+@media (min-width: 650px) {
+  .faqs-container {
+    min-width: auto;
+    max-width: 600px;
+  }
+}
 </style>

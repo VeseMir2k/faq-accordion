@@ -6,6 +6,8 @@
   --white: #fff;
 }
 
+$breakpoint-desktop: 650px;
+
 * {
   margin: 0;
   padding: 0;
@@ -32,19 +34,11 @@ h1 {
   font-size: 32px;
   font-weight: 700;
 }
-/* h1 {
-  font-size: 56px;
-  font-weight: 700;
-} */
 
 h2 {
   font-size: 16px;
   font-weight: 500;
 }
-/* h2 {
-  font-size: 18px;
-  font-weight: 500;
-} */
 
 p {
   color: var(--pale-purple);
@@ -60,4 +54,31 @@ button {
   min-width: 100%;
   min-height: 100vh;
   padding: 100px 24px 0;
+}
+
+@media (min-width: $breakpoint-desktop) {
+  body {
+    min-width: 100vw;
+    min-height: 100vh;
+    background-image: url("./assets/background-pattern-desktop.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  h1 {
+    font-size: 56px;
+    font-weight: 700;
+  }
+
+  h2 {
+    font-size: 18px;
+    font-weight: 500;
+  }
+
+  #app {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    // padding-top: 170px;
+  }
 }
